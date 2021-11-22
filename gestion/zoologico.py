@@ -1,5 +1,3 @@
-from gestion.zona import Zona
-
 class Zoologico:
     def __init__(self, nombre, ubicacion):
         self._nombre = nombre
@@ -10,6 +8,7 @@ class Zoologico:
         self._zonas.append(zona)
     
     def cantidadTotalAnimales(self):
+        from gestion.zona import Zona
         x = 0
         for zona in self._zonas:
             x += zona.cantidadAnimales()
